@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <hizli.batarya.sarjetme.app.prefrence.mPreferenceCatagory android:textColor="#fff44336" android:title="Hakkında">
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Daha Fazla" android:key="MoreApp" android:summary="Yapımcıdan daha fazla program alın" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="5 Yıldız Ver" android:key="RateUs" android:summary="Bizi değerlendirmek için bi kaç saniyenizi alabilir miyiz?" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Arkadaşlarına Öner" android:key="ShareApp" android:summary="Programı dünyaya duyurmak için bize yardımcı olur musunuz?" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Hakkımızda" android:key="About" android:summary="Hakkımızdaki bilgiler" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Yorum Yap" android:key="FeedBack" android:summary="5x Hızlı Şarj Etme hakında lütfen yorum yapın" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Version" android:key="Version" android:summary="1.0.0" />
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Güncelle" android:key="Update" android:summary="Yeni Güncelleme kontrol Et" />
+    </hizli.batarya.sarjetme.app.prefrence.mPreferenceCatagory>
+    <hizli.batarya.sarjetme.app.prefrence.mPreferenceCatagory android:textColor="#fff44336" android:title="Lisans">
+        <hizli.batarya.sarjetme.app.prefrence.mPreference android:title="Lisans" android:key="Licence" android:summary="Lisans bilgisi" />
+    </hizli.batarya.sarjetme.app.prefrence.mPreferenceCatagory>
+</PreferenceScreen>

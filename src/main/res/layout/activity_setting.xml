@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@drawable/background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.gms.ads.AdView android:id="@+id/adView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="false" android:layout_centerHorizontal="true" app:adSize="BANNER" app:adUnitId="ca-app-pub-3014314167355758/6458894823"/>
+        <include android:id="@+id/tool_bar" android:layout_width="match_parent" layout="@layout/toolbar"/>
+        <FrameLayout android:id="@+id/content_frame" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/BannerAd" android:layout_below="@+id/tool_bar"/>
+    </LinearLayout>
+</RelativeLayout>

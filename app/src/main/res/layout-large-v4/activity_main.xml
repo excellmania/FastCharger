@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="false" android:layout_centerHorizontal="true" ads:adSize="BANNER" ads:adUnitId="ca-app-pub-3014314167355758/6458894823" />
+        <include android:id="@id/tool_bar" android:layout_width="fill_parent" layout="@layout/toolbar" />
+        <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tool_bar">
+            <RelativeLayout android:id="@id/card_process" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip">
+                <android.support.v7.widget.CardView android:id="@id/CardViewBatteryArc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:foreground="?android:selectableItemBackground">
+                    <RelativeLayout android:id="@id/batteryArc" android:layout_width="fill_parent" android:layout_height="300.0dip" android:layout_marginBottom="8.0dip">
+                        <RelativeLayout android:id="@id/lout_batteryarc" android:layout_width="220.0dip" android:layout_height="220.0dip" android:layout_margin="18.0dip">
+                            <com.github.lzyzsd.circleprogress.ArcProgress android:id="@id/arc_progress" android:layout_width="fill_parent" android:layout_height="fill_parent" ads:arc_stroke_width="10.0dip" ads:arc_unfinished_color="@color/WhiteAlpha" ads:arc_finished_color="@color/White" ads:arc_text_color="@color/White" ads:arc_bottom_text_color="@color/White" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/lout_batteryarc">
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                                <RelativeLayout android:id="@id/AlertLout" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                                    <ImageView android:id="@id/alert" android:layout_width="80.0dip" android:layout_height="80.0dip" android:src="@drawable/ic_warning_white_48dp" />
+                                    <TextView android:textSize="58.0sp" android:textColor="@color/white" android:id="@id/AlertText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="2" android:layout_toRightOf="@id/alert" android:layout_centerVertical="true" />
+                                </RelativeLayout>
+                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/AlertLout">
+                                    <Button android:textSize="20.0sp" android:id="@id/PowerSavingMode" android:background="@drawable/button" android:paddingLeft="45.0dip" android:paddingTop="-10.0dip" android:paddingRight="45.0dip" android:paddingBottom="-10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Optimize Et" android:layout_centerInParent="true" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@id/CardViewTools" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:foreground="?android:selectableItemBackground" android:layout_below="@id/CardViewBatteryArc">
+                    <RelativeLayout android:id="@id/loutTools" android:layout_width="fill_parent" android:layout_height="350.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/devider" android:layout_centerInParent="true">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="2.0">
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_wifi" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_wifi_on" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="WiFi" android:layout_below="@id/tool_wifi" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_bluetooth" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_bluetooth_on" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Bluetooth" android:layout_below="@id/tool_bluetooth" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_brightness" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_brightness_on" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Parlaklık" android:layout_below="@id/tool_brightness" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_rotate" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_rotate_autorotate" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Ekranı Döndür" android:layout_below="@id/tool_rotate" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_mode" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_profile_normal" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Mod" android:layout_below="@id/tool_mode" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_centerInParent="true">
+                                        <ImageView android:id="@id/tool_timeout" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ic_tool_timeout_fourty" android:layout_centerInParent="true" />
+                                        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Zaman Aşımı" android:layout_below="@id/tool_timeout" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView android:id="@id/batteryDetail" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:foreground="?android:selectableItemBackground" android:layout_below="@id/CardViewTools">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="2.0dip">
+                            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+                                        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/TxtTemperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AAAAA" android:singleLine="true" android:layout_centerHorizontal="true" />
+                                        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="Sıcaklık" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <View android:background="#93ffffff" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+                                        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/TxtVoltage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AAAAA" android:singleLine="true" android:layout_centerHorizontal="true" />
+                                        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="Volt" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                                <View android:background="#93ffffff" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+                                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+                                        <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/TxtLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AAAAA" android:singleLine="true" android:layout_centerHorizontal="true" />
+                                        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="Seviye" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <RelativeLayout android:id="@id/ratenow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/batteryDetail">
+                    <android.support.v7.widget.CardView android:id="@id/CardViewRate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground">
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <RelativeLayout android:id="@id/Rlout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/TxtRateTitle" android:paddingLeft="16.0dip" android:paddingTop="24.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5x Hızlı Şarj Etme'yi sevdiniz mi ?" android:layout_alignParentLeft="true" />
+                                <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/TxtRateDesc" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 saniyenizi ayırıp, programa puan vermek ister misiniz?" android:layout_below="@id/TxtRateTitle" android:layout_alignParentLeft="true" />
+                            </RelativeLayout>
+                            <RelativeLayout android:id="@id/Rlout_action" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/Rlout_top">
+                                <Button android:textColor="@color/textPreference" android:id="@id/btn_feedbak" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Geri Bildirim" />
+                                <Button android:textColor="@color/textPreference" android:id="@id/btn_ratenow" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 Yıldız Ver" android:layout_toRightOf="@id/btn_feedbak" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/sharenow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:layout_below="@id/ratenow">
+                    <android.support.v7.widget.CardView android:id="@id/CardViewShare" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip">
+                            <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/TxtShareTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="Arkadaşlarına Öner" android:layout_alignParentLeft="true" />
+                            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/TxtShareDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="1 dakikanızı ayırıp 5x Hızlı Şarj Etme'yi tüm dünyaya yaymamıza yardım eder misiniz?" android:layout_below="@id/TxtShareTitle" android:layout_alignParentLeft="true" />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

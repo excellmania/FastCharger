@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/roul_detail" android:background="#4d000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/tool_bar" layout="@layout/toolbar" />
+        <RelativeLayout android:id="@id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tool_bar">
+            <TextView android:id="@id/header" android:layout_width="fill_parent" android:layout_height="170.0dip" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:src="@mipmap/ic_launcher" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="22.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:layout_below="@id/app_icon" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/app_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Pilinizin Gücünü Varın!" android:layout_below="@id/app_name" android:layout_centerHorizontal="true" android:fontFamily="sans-serif-thin" />
+            <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/app_description" android:layout_alignParentBottom="false" android:layout_centerHorizontal="false" ads:adSize="BANNER" ads:adUnitId="ca-app-pub-3014314167355758/6458894823" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/BannerAd" android:layout_below="@id/roul_detail">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+            <android.support.v7.widget.CardView android:id="@id/about_1" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:foreground="?android:selectableItemBackground" ads:cardCornerRadius="2.0dip">
+                <TextView android:textSize="22.0dip" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/app_name" android:fontFamily="sans-serif-light" />
+                <TextView android:textSize="18.0dip" android:textColor="@android:color/black" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="un4saken@hotmail.co.uk" android:fontFamily="sans-serif-thin" />
+            </android.support.v7.widget.CardView>
+            <LinearLayout android:orientation="vertical" android:id="@id/NativeAdContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/about_1" />
+            <android.support.v7.widget.CardView android:id="@id/CardViewRate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/NativeAdContainer" ads:cardCornerRadius="2.0dip">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/Rlout_top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/TxtRateTitle" android:paddingLeft="16.0dip" android:paddingTop="24.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5x Hızlı Şarj Etme'yi sevdiniz mi ?" android:layout_alignParentLeft="true" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/TxtRateDesc" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 saniyenizi ayırıp, programa puan vermek ister misiniz?" android:layout_below="@id/TxtRateTitle" android:layout_alignParentLeft="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/Rlout_action" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/Rlout_top">
+                        <Button android:textColor="@color/textPreference" android:id="@id/btn_feedbak" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Geri Bildirim" />
+                        <Button android:textColor="@color/textPreference" android:id="@id/btn_ratenow" android:background="?android:selectableItemBackground" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 Yıldız Ver" android:layout_toRightOf="@id/btn_feedbak" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView android:id="@id/CardViewShare" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:foreground="?android:selectableItemBackground" android:layout_below="@id/CardViewRate" ads:cardCornerRadius="2.0dip">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/TxtShareTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="Arkadaşlarına Öner" android:layout_alignParentLeft="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/TxtShareDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="1 dakikanızı ayırıp 5x Hızlı Şarj Etme'yi tüm dünyaya yaymamıza yardım eder misiniz?" android:layout_below="@id/TxtShareTitle" android:layout_alignParentLeft="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/BannerAd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>
